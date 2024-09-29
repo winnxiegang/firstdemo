@@ -1,0 +1,22 @@
+<view class="menu-content">
+  <!-- 左边总视图 -->
+  <view class="menu-container">
+  <!-- 左边list视图 要像上下滑动必须 用  scroll-view 包裹-->
+    <scroll-view scroll-y="true" class="scroll-view">
+      <view class="scroll-view-list">
+        <block wx:for="{{detail}}"  wx:key="index">
+          <view class="scroll-view-item {{indexSize === index?'active':''}}" bindtap="chooseTypes" data-index="{{index}}">{{item.name}}</view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <scroll-view scroll-y="true" class="swiper-view-list">
+    <!-- 标题 -->
+    <view class="swiper-view-item">
+      <view class="view-item-title overflow">{{item.name}}全部分类</view>
+    </view>
+    <view class="swiper-view-item" wx:for="{{detail[indexSize].children}}" wx:key="index">
+      <view class="view-item-title overflow" data-cid='{{item.id}}' data-cname="{{item.name}}" bindtap='chooseSecondMenu' hover-class='this-check'>{{item.name}}</view>
+    </view>
+  </scroll-view>
+</view>

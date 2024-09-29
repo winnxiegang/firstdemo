@@ -1,0 +1,13 @@
+{
+  "usingComponents": {},
+
+  
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+ 
+    "navigationBarTitleText": "两级联动" ,
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+   
+}

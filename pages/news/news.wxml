@@ -1,0 +1,54 @@
+<!--pages/news/news.wxml-->
+<text>pages/news/news.wxml</text>
+<view >{{randomNum}}</view>
+<view>{{randomNum>5?"随机数大于5":"随机数不大于5"}}</view>
+<view class="box">123</view>
+<navigator class="navigator" url="/pages/detail/detail" open-type="navigate">跳到详情界面</navigator>
+<view class="container">
+  <button bind:tap="handleLogin">点击登录操作</button>
+</view>
+<view class="{{activeStr}}"> 属性上的末班用法</view>
+<!--一层列表渲染-->
+<view wx:for="{{info}}" wx:key="index">"{{item}}----{{index}}"</view>
+<!--两层列表渲染 wx:for-item 的意思 就是给子view 起个名字 就是多循环操作-->
+<view wx:for="{{objectArray}}" wx:for-item='itemClr' wx:for-index='i'>{{itemClr.unique}}----{{i}}</view>
+<view wx:if="{{length>5}}">长度大于5</view>
+<view wx:elif="{{length>4}}">长度大于5</view>
+<view wx:else="">6666</view>
+<button bind:tap="tagTest" data-name="我是绑定的闯过的数据  必须前缀完整的代码 event.currentTarget.dataset才能获取数据">点击我测试</button>
+<button bind:tap="changeName" type="warn"> 点击修改数据</button>
+<view class="container">{{changeContant}}</view>
+<!-- 列表高亮显示 -->
+<view class="{{index==infoIndex?'active':''}}" wx:for="{{info}}" wx:key="index" bind:tap="clickLight" data-index="{{index}}">{{item}}</view>
+<!-- 模板使用 -->
+<import src='/common/list/list'></import>
+<view wx:for='{{dataList}}' wx:key="index">
+  <template is="newList" data="{{...item}}"></template>
+</view>
+<view class="viewTest">
+  <view class="viewTest1">A</view>
+  <view class="viewTest2">B</view>
+  <view class="viewTest3">C</view>
+</view>
+<scroll-view class="scrollviewTest" scroll-y>
+  <view class="viewTest1">A</view>
+  <view class="viewTest2">B</view>
+  <view class="viewTest3">C</view>
+</scroll-view>
+<swiper class="swiperContaion" indicator-dots indicator-color="white" indicator-active-color="red" autoplay="true">
+  <swiper-item class="swiperContaion">
+    <image class="image" src="/icon/tabar_message_selected.png" mode="heightFix"> </image>
+  </swiper-item>
+  <swiper-item>
+    <view class="viewTest2">B</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="viewTest3">C</view>
+  </swiper-item>
+</swiper>
+<button type="primary" bind:tap="btnTagHandle" data-data="数据来了">点击按钮</button>
+<input  class="input" type="nickname" bind:input="inputData"></input>
+<!-- 点击切换tab界面 -->
+<navigator class="navigator" url="/pages/logs/logs" open-type="switchTab"> 切换tab测试</navigator>
+<!-- 传参跳转 -->
+<navigator url="/pages/detail/detail?name=123&age=20">跳转传参测试</navigator>

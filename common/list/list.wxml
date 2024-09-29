@@ -1,0 +1,8 @@
+<!--pages/news/list/list.wxml-->
+<!-- 定义模板 item项 -->
+<template name="newList">
+  <view class="newList">
+    <view class="left">{{image}}</view>
+    <view class="right">{{unique}}</view>
+  </view>
+</template>

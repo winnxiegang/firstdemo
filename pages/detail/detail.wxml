@@ -1,0 +1,6 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+<navigator open-type='navigateBack' delta="1"> 后退</navigator>
+<button bind:tap="goToTab" class="button"> 通过代码逻辑进行跳转Tab操作</button>
+<button bind:tap="goToMine">通过代码逻辑进行跳转界面操作</button>
+ 

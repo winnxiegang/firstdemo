@@ -1,0 +1,5 @@
+/* pages/detail/detail.wxss */
+.button{
+  width: 250rpx;
+  background-color: cadetblue;
+}

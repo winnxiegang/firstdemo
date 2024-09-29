@@ -1,0 +1,16 @@
+<!--pages/colorList/colorList.wxml-->
+
+<view style="background-color: #F0F0F0;"> <text>创业项目</text>
+  <view wx:for="{{colorList}}" wx:key="index" class="top-item">
+
+<view class="container" bind:tap="clickDetail">
+ 
+    <image class="icon" src="{{item.bgImg}}" />
+    <view class="texts">
+      <view class="title">{{index}}{{item.subName}}</view>
+      <view class="subTitle">{{item.topicName}}</view>
+      <view class="msg">{{item.topicTxt}}</view>
+    </view>
+ 
+</view></view>
+</view>

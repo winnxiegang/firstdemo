@@ -1,0 +1,7 @@
+<!--pages/logs/logs.wxml-->
+<text>pages/logs/logs.wxml</text>
+<button bind:tap="onClick"> 点击给更改数据</button>
+<text>{{clickNum}}</text>
+<button bind:tap="onClickSet"> 点击重置数据</button>
+<view class="box"></view>
+<navigator url="/pages/colorList/colorList">点击获取随机颜色测试列表界面</navigator>

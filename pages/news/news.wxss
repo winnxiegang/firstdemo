@@ -1,0 +1,65 @@
+/* pages/news/news.wxss */
+ @import '/common/list/list.wxss';
+.box{
+  background-color: aqua;
+  height: 100rpx;
+}
+.active{
+  color: red;
+}
+.viewTest{
+
+  display: flex;
+  justify-content: space-between;
+}
+ .viewTest1{
+   text-align: center;
+   line-height: 200rpx;
+   width: 200rpx;
+   height: 200rpx;
+   background-color: lightgreen;
+ }
+ .viewTest2{     text-align: center;
+  line-height: 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: lightsalmon;
+}
+.viewTest3{     text-align: center;
+  line-height: 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: limegreen;
+}
+.scrollviewTest{
+ 
+  justify-content: space-between;
+}
+.swiperContaion{
+  height: 400rpx;
+  background-color: rosybrown;
+}
+image{
+  border:1rpx black ;
+}
+.input{
+  border:1px solid aqua;
+  margin: 5px;
+  padding: 5px;
+ border-radius: 5px;
+}
+.navigator{
+  margin: 30rpx 20rpx;
+  color: #000;
+  padding: 30rpx 20rpx;
+ 
+  background-color: #4CAF50; /* 背景颜色 */
+  color: white; /* 文字颜色 */
+  border-radius: 5rpx; /* 圆角 */
+  text-decoration: none; /* 去掉下划线 */
+  font-size: 30rpx; /* 字体大小 */
+  cursor: pointer; /* 鼠标悬停时变为手型 */
+}
+.navigator :hover{
+  background-color: blanchedalmond;
+}
