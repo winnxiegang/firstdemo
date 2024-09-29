@@ -1,4 +1,17 @@
 <!--index.wxml-->
 
+<!--index.wxml-->
+
 <view>3333</view>
+<view>{{info}}</view>
+<!-- 外部封装然后内部调用使用测试 -->
+<!-- display: flex  就是启用自适应 -->
+<!-- flex-direction 就是控制总体布局方向 -->
+<!-- justify-content  就是控制子项的布局-->
+<wxs src="/common/tool.wxs" module="m2"></wxs>
+<view style="display: flex; flex-direction: column;  justify-content: center; align-items: flex-start;">
+  <view>{{m2.toLpwer(info)}}</view>
+  <view>{{m2.getData(info)}}</view>
+</view>
+ 
  

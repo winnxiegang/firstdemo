@@ -1,11 +1,11 @@
 function toLpwer(str){
-  str.toLowerCase()
+    return str.toLowerCase()
 }
 module.exports={
   toLpwer:toLpwer
 }
 function getData(str){
-  str+"就是自定义的方法 然后导出后外部定义使用"
+  return  "就是自定义的方法 然后导出后外部定义使用"
 }
 module.exports={
 getData:getData

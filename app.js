@@ -8,8 +8,7 @@ App({
 
  
     onLaunch: function () {
-      // 初始化插件
-      wxExtend.init();
+    
     },
  
 
